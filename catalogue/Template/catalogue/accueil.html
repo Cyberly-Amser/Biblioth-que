@@ -1,0 +1,29 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Accueil-LirePlus{% endllock %}</title>
+    <link rel="stylesheet" href="{%static 'catalogue/css/style.css' %}">
+</head>
+<body>
+    <div class="msg_bienvenue">
+       <p>{{heure}}</p> 
+            {% if int(heure) >=6 %}
+                <p><strong> Bonjour et Bienvenue Nous avons du nouveu pour vous</strong></p>
+                {% elif int(heure)>=12 %}
+                <p><strong>Bon après-midi</strong> nous avons du nouveau pour vous</p>
+                {% elif int(heure)>=16 %}
+                <p><strong>Bonsoir</strong> nous avons du nouveau pour vous</p>
+            {% endif %}
+
+    </div>
+    <div class="a_la_1">
+        <p></p>
+    </div>
+    <div class="statistic"></div>
+    <div class="citation"></div>
+    <div class="header"></div>
+</body>
+</html>
