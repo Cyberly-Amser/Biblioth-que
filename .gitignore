@@ -1,8 +1,11 @@
 # Python
 *.py[cod]
 *$py.class
-__pycache__/
 *.so
+__pycache__/
+*.egg-info/
+dist/
+build/
 
 # Django
 *.log
@@ -12,16 +15,22 @@ media/
 staticfiles/
 
 # Environnement virtuel
-venv/
-env/
+*venv/
+*env/
 .venv/
+ENV/
+*env/
+env_biblio/
 
 # Variables d'environnement
 .env
+.env.local
 
 # IDE
-.vscode/
+*.vscode/
 .idea/
+*.swp
 
 # Système
 .DS_Store
+Thumbs.db
